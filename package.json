@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/NotLogic/webpack-study/issues"
   },
-  "homepage": "https://github.com/NotLogic/webpack-study#readme"
+  "homepage": "https://github.com/NotLogic/webpack-study#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6"
+  }
 }
