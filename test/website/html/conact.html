@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>深圳市拉呱科技-看逗逗老乡圈，让距离不再遥远</title>
+  <meta itemprop="name" content="看逗逗 - 分享生活，相遇美好">
+  <meta name="keywords" content="看逗逗, 交友平台, 同乡资源, 热点推送, 招商政务服务">
+  <meta name="description" content="看逗逗是一个乡友聚集地，让身在异乡的你不在形单影只，更有海量的全国同乡资源；会定时推送全国热点，还提供家乡招商政务服务！">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="../images/favicon.png">
+  <script>
+    // 是移动端，直接去下载页
+    if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){
+      window.location.href = 'http://download.2017zsx.com/download.html'
+    }
+  </script>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="my-nav gray-shadow" id="my-nav">
+      <div class="main-area clearfix">
+        <div class="logo">
+          <a href="../index.html" class="main-theme">
+            <img src="../images/app-logo.png" alt="">看逗逗
+          </a>
+        </div>
+        <div class="nav-wrapper gray-nav-wrapper">
+          <div class="nav-item" data-selector="">
+            <a href="../index.html">首页</a>
+          </div>
+          <div class="nav-item" data-selector="#about-us">
+            <a href="about.html">关于我们</a>
+          </div>
+          <div class="nav-item cur" data-selector="#conact-us">
+            <a href="conact.html">联系我们</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 联系我们 -->
+    <div class="common-bar-wrapper" id="conact-us">
+      <div class="common-bar main-area">
+        <div class="bar-title">联系我们</div>
+        <p>Contact us</p>
+      </div>
+    </div>
+
+    <div class="main-area">
+      <div class="map-wrapper">
+        <div class="contact-details" id="map-container"></div>
+        <div class="map-info-box">
+          <div class="info-common info-box-shadow"></div>
+          <div class="info-common info-main">
+            <div class="info-title">深圳市拉呱科技有限公司</div>
+            <div class="info-content-item info-top-blank">公司地址：</div>
+            <div class="info-content-item">深圳市南山区科技园南区粵兴六道中科纳能大厦C区4A一2</div>
+            <div class="info-content-item info-top-blank">联系电话：</div>
+            <div class="info-content-item">0755-23355129</div>
+            <!-- <div class="info-close" onclick="closeInfoBox()"><a href="javascript:;">X</a></div> -->
+            <!-- <div class="bottom-arrow"><span></span></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-footer" id="my-footer">
+      <div class="main-area">
+        <div class="copyright">Copyright © 2017 粤ICP备15067190号-3 深圳市拉呱科技有限公司版权所有</div>
+        <div class="address">深圳市南山区科技园南区粵兴六道中科纳能大厦C区4A一2 0755-23355129</div>
+        <div class="report">
+          <a target="_blank" href="http://report.12377.cn:13225/toreportinputNormal_anis.do">网上有害信息举报专区</a>
+          <span>有害信息举报电话 0755-83662670</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/baidu.map.js"></script>
+  <script src="../js/InfoBox_min.js"></script>
+  <style>
+    .map-info-box {
+      /* position: relative; */
+      position: absolute;
+      left: 50px;
+      top: 240px;
+      width: 320px;
+      height: 270px;
+      color: #fff;
+      /* background-color: rgba(61, 69, 94, .7); */
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    .info-common{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .info-box-shadow{
+      z-index: 1;
+      background-color: #3d455e;
+      opacity: .7;
+      filter: alpha(opacity=70);
+    }
+    .info-main{
+      width: 320px;
+      padding: 40px 30px;
+      z-index: 2;
+    }
+    /* 不使用百度的关闭图片 */
+    .infoBox img{
+      display: none;
+    }
+
+    .map-info-title {
+      font-size: 18px;
+    }
+
+    .info-content-item {
+      font-size: 12px;
+    }
+    .info-top-blank{
+      margin-top: 15px;
+    }
+    .info-close a {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      color: #fff;
+      padding: 0 3px;
+    }
+
+    .bottom-arrow {
+      position: absolute;
+      left: calc(50% - 20px);
+      left: -moz-calc(50% - 20px);
+      left: -webkit-calc(50% - 20px);
+      width: 20px;
+      height: 1px;
+      bottom: -1px;
+    }
+
+    .bottom-arrow span {
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 20px 20px 0px;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, .8) transparent transparent;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+  <script>
+    var map = new BMap.Map("map-container");
+    var infoHtml = [
+      '<div style="padding: 0 10px; width: 100px;border: 1px solid rgb(128, 128, 128);">我们在这里</div>'
+      // '<div class="map-info-box">',
+      // '<div class="info-title">深圳市拉呱科技有限公司</div>',
+      // '<div class="info-content-item info-top-blank">公司地址：</div>',
+      // '<div class="info-content-item">深圳市南山区科技园南区粵兴六道中科纳能大厦C区4A一2</div>',
+      // '<div class="info-content-item info-top-blank">联系电话：</div>',
+      // '<div class="info-content-item">0755-23355129</div>',
+      // '<div class="info-close" onclick="closeInfoBox()"><a href="javascript:;">X</a></div>',
+      // '<div class="bottom-arrow"><span></span></div>',
+      // '</div>',
+    ];
+    var infoBox = new BMapLib.InfoBox(map, infoHtml.join(""), {
+      closeIconMargin: "1px 1px 0 0",
+      enableAutoPan: true,
+      align: INFOBOX_AT_TOP
+    });
+    function mapInit() {
+      var point = new BMap.Point(113.947977, 22.531861);
+      map.centerAndZoom(point, 17);
+      var marker = new BMap.Marker(point);
+      infoBox.open(marker);
+      map.addOverlay(marker);
+      marker.enableDragging();
+      map.enableScrollWheelZoom()
+    }
+    // 初始显示信息窗口
+    mapInit()
+    // function closeInfoBox() {
+    //   infoBox.close();
+    //   // 关闭后显示红点
+    //   mapInit2()
+    // }
+    // function mapInit2() {
+    //   var point = new BMap.Point(113.947977, 22.531861);
+    //   map.centerAndZoom(point, 17);
+    //   var marker = new BMap.Marker(point);
+    //   map.addOverlay(marker);
+    //   map.enableScrollWheelZoom()
+    // }
+  </script>
+
+</body>
+
+</html>

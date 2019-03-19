@@ -1,0 +1,406 @@
+html,body,#app{
+  width: 100%;
+  height: 100%;
+  line-height: 26px;
+  font-size: 14px;
+  color: #414a50;
+  font-family: arial,verdana,helvetica,'PingFang SC','HanHei SC',STHeitiSC-Light,Microsoft Yahei,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+/* bootstrap.css中设置了underline */
+a:focus,a:hover{
+  text-decoration: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* for IE/Mac */
+.clearfix {
+  /* display: inline-block; */
+  zoom: 1; 
+}  
+
+.fl{float: left;}
+.fr{float: right;}
+
+/* 主区域 */
+.main-area{
+  width: 980px;
+  margin: 0 auto;
+}
+.main-theme{
+  /* color: #6A7EFE!important; */
+  color: #fe3919!important;
+  
+}
+.gray{
+  color: #3d455e;
+}
+.tit{
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* 所有页面元素容器 */
+#app{
+
+}
+
+/* nav  start */
+.my-nav{
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  z-index: 1;
+}
+
+.logo{
+  float: left;
+  width: 300px;
+  vertical-align: middle;
+  font-size: 24px;
+}
+.logo img{
+  /* float: left; */
+  width: 30px;
+  margin-top: -5px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.logo a{
+  color: #fff;
+}
+
+.nav-wrapper{
+  float: right;
+}
+.nav-item{
+  position: relative;
+  float: left;
+  margin: 0 25px;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: none;
+}
+.nav-item a{
+  color: #fff;
+}
+.gray-nav-wrapper .nav-item a{
+  color: gray;
+}
+.nav-item:last-child{
+  margin-right: 0;
+}
+/* cur加在nav-item的元素上 */
+.cur a:after{
+  content: "";
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  height: 1px;
+}
+.gray-nav-wrapper a:after{
+  /* border-color: #6A7EFE; */
+  border-color: #fe3919;
+}
+/* nav  end */
+
+/* header  start */
+.my-header{
+  position: relative;
+  height: 100%;
+  background: url('../images/banner.png') no-repeat left top;
+  background-size: 1920px 870px;
+  -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/banner.png', sizingMethod='scale');
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/banner.png', sizingMethod='scale');
+  background: none\9;
+
+}
+.banner-img{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: auto;
+  z-index: -1;
+}
+/* 设置上间距为滚动导航的高度 */
+.my-header .banner{
+  position: relative;
+  height: 858px;
+  /* -webkit-calc(100% - 80px);在苹果浏览器中显示生效，但是高度还是0，因此设为固定高度 */
+  /* height: calc(100% - 80px);
+  height: -moz-calc(100% - 80px);
+  height: -webkit-calc(100% - 80px); */
+}
+.banner-main{
+  position: absolute;
+  left: 0;
+  /* bottom: 0; */
+  bottom: 110px;
+  width: 100%;
+}
+.banner-main .left{
+  padding-top: 180px;
+  padding-left: 50px;
+  color: #fff;
+}
+.banner-main .right{
+  /* margin-right: 50px; */
+}
+.banner-title{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.banner-sub-title{
+  font-family: Microsoft Yahei;
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.gray-short-line{
+  width: 20px;
+  height: 4px;
+  background-color: #3d445e;
+}
+.short-line{
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+}
+.download-wrapper{
+  margin-top: 60px;
+}
+.qr-code-download-wrapper{
+  position: relative;
+  width: 62px;
+  height: 62px;
+  margin-right: 20px;
+  background: url('../images/qr-code-hover.png') no-repeat center;
+  background-size: cover;
+}
+.qr-code-download-wrapper:hover{
+  background-image: url('../images/qr-code.png')
+}
+.qr-code-download-wrapper:hover .qr-code-wrapper{
+  display: block;
+}
+.qr-code-wrapper{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 200px;
+  padding: 15px 25px;
+  z-index: 9;
+  border: 3px solid #414a50;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #fff;
+}
+.download-qr-img-wrapper{
+  text-align: center;
+  color: #9fa3b0;
+  font-size: 12px;
+}
+.download-qr-img-wrapper img{
+  width: 150px;
+}
+.qr-code-wrapper .header img{
+  width: 30px;
+  margin-right: 10px;
+}
+.qr-code-wrapper .header{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.qr-code-wrapper .sub-title{
+  font-size: 12px;
+  color: #9fa3b0;
+  font-weight: 100;
+}
+.download-item{
+  float: left;
+  margin-right: 20px;
+  width: 62px;
+  /* width: 185px; */
+  /* height: 58px; */
+  height: 62px;
+  line-height: 53px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  padding: 0 11px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  /* ie9及之前浏览器不支持，使用js代替 */
+  transition: width .3s;
+}
+.download-item:hover{
+  width: 185px;
+}
+
+.download-btn{
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  font-family: Microsoft Yahei;
+}
+.download-btn .letter-spacing{
+  letter-spacing: 2.5px;
+}
+.download-btn:hover{
+  color: #fff;
+}
+.download-btn img{
+  width: 36px;
+}
+.download-btn span{
+  float: right;
+}
+
+/* header  end */
+
+/* main  start */
+.my-main{
+
+}
+.production-wrapper,
+.about-us-wrapper,
+.production-introduce-wrapper,
+.conact-us-wrapper{
+  padding: 20px 0;
+}
+
+/* 产品介绍 */
+.introduce-item{
+
+}
+.pad-top{
+  padding-top: 200px;
+}
+.production-introduce-item{
+  text-align: center;
+}
+.production-tit{
+  font-size: 24px;
+  font-weight: 600;
+  color: #6A7EFE;
+  margin-bottom: 10px;
+}
+.production-sub-tit{
+  /* color: #333; */
+  margin-bottom: 10px;
+}
+.production-img-wrapper img{
+  width: 370px;
+}
+
+
+.products-container {
+  min-height: 500px;
+  background: url('../images/product-bg.png') no-repeat right bottom;
+  background-size:40%;
+}
+
+.about-us-wrapper{
+  background-color: #ebebeb;
+}
+.about-container {
+  min-height: 656px;
+  font-size: 16px;
+  background: url('../images/about.png') no-repeat left center;
+}
+.about-container .tit{
+  text-align: right;
+}
+.about-container .txt-box {
+  margin-top: 185px;
+}
+
+.map-wrapper{
+  position: relative;
+}
+.contact-details{
+  height: 580px;
+  margin: 40px 0;
+}
+
+.gray-shadow{
+  box-shadow: 0 0 4px #999;
+  -moz-box-shadow: 0 0 4px #999;
+  -webkit-box-shadow:0 0 4px #999;
+}
+/* 公共条 */
+.common-bar-wrapper{
+  background: url('../images/common-bar.png') no-repeat left center;
+  background-size: cover;
+}
+.common-bar{
+  height: 178px;
+  color: #fff;
+}
+.common-bar .bar-title{
+  padding-top: 40px;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+/* 关于我们 */
+.about{
+  padding: 100px 0 90px 0;
+}
+.production{
+  background-color: #ebebeb;
+}
+.production-main{
+  background: url('../images/about.png') no-repeat right bottom;
+  /* background-size: auto 386px; */
+}
+.about-company{
+  background: url('../images/product-bg.png') no-repeat left bottom;
+  background-size: auto 100%;
+}
+.common-wrapper{
+  width: 500px;
+}
+.common-wrapper .common-title{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.common-wrapper .sub-title{
+  color: #666;
+  margin-bottom: 25px;
+}
+.top-blank{
+  margin-top: 20px;
+}
+/* main  end */
+
+
+/* footer  start */
+.my-footer{
+  background-color: #3d455e;
+  padding: 40px 0 50px 0;
+  text-align: center;
+  color: #fff;
+}
+.report a{
+  color: #6A7EFE;
+}
+/* footer  end */

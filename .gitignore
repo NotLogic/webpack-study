@@ -1,0 +1,79 @@
+#   .gitignore简单说明
+
+#   忽略所有.a结尾的文件
+*.a
+
+#   lib.a除外
+!lib.a
+
+#   进忽略项目根目录下的TODO文件，不包括subdir/TODO
+/TODO
+
+#   忽略build目录下的所有文件，锅炉整个build文件夹
+build/
+
+#   忽略doc/notes.txt但不包括doc/server/arch.txt
+doc/*.txt
+
+#   忽略cat.c但是不忽略build/cat.c
+/*.c
+
+#   忽略debug/io.obj，不忽略debug/common/io.obj和tools/debug/io.obj
+debug/*.obj
+
+#   忽略/foo, a/foo,a/b/foo等
+**/foo
+
+#   忽略a/b,a/x/b,a/x/y/b等
+a/**/b
+
+#   不忽略bin目录下的run.sh文件
+!/bin/run.sh
+
+#   忽略所有.log文件
+*.log
+
+#   忽略当前路径的config.php文件
+config.php
+
+#   表示过滤整个文件夹
+/mtk/
+
+#   过滤某个具体的文件
+/mtk/do.c
+
+#   gitignore还可以指定要将哪些文件添加到版本管理中，如下：
+!*.zz
+!/mtk/one.tx
+
+#   唯一的区别就是规则开头多了感叹号，Git会将满足这类规则的文件添加到版本管理中。
+#   因为如果只需要管理/mtk/目录中的one.txt，这个目录中的其他文件都不需要管理，那么.gitignore规则应写为:
+/mtk/*
+!/mtk/one.txt
+
+#   假设只有过滤规则，而没有添加规则，那么我们就需要把/mtk/目录下除了one.txt意外的所有文件都写出来
+#   注意：上面的/mtk/*不能写为/mtk/，否则父目录被前面的规则排除掉了,one.txt文件虽然加了!过滤规则，也不会生效
+
+
+# 还有一些规则如下
+
+#    忽略目录fdl下的全部UN额iron；注意，不管是根目录下的/fdl/目录，还是某个泽牧路/child/fdl/目录，都会被忽略
+fdl/*
+
+#   忽略根目录下的/fdl/目录的全部内容
+/fdl/*
+
+
+#   一下规则：忽略全部内容，但是不忽略.gitignore文件、跟目录写的/fw/bin/和/fw/sf/目录；注意先对bin/的父目录使用!规则，使其不被排除
+#   /*
+#   !.gitignore
+#   !/fw/
+#   /fw/*
+#   !/fw/bin/
+#   !/fw/sf/
+
+
+### 如果不慎在穿点.gitignore文件之前就push了项目，那么及时在.gitignore文件中写入新的过滤规则，这些规则也不会起作用，git仍然会对所有文件进行版本管理
+### 简单来说是因为git已经开始管理这些文件了，所以无法通过过滤规则过滤它们
+
+
